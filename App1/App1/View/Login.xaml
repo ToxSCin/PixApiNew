@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.View.Login"
+             Title="Login">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="Black"
+                          Offset="0.11"/>
+            <GradientStop Color="DarkBlue"
+                          Offset="1.11"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Image x:Name="logo" HeightRequest="85"/>
+            <Frame CornerRadius="30"
+                   x:Name="form_login"
+                   VerticalOptions="Fill"
+                   BackgroundColor="Transparent"
+                   BorderColor="Black"
+                   Margin="20"
+                   Scale="1"
+                   MinimumWidthRequest="20">
+                   
+                <StackLayout>
+                    <Label Text="CPF" TextColor="Purple"/>
+                    <Entry x:Name="txt_cpf" Keyboard="Numeric" TextColor="AliceBlue"/>
+                    <Label Text="Senha"  TextColor="Purple"/>
+                    <Entry x:Name="txt_senha"
+                           TextColor="MediumPurple"
+                           Keyboard="Default"
+                           IsPassword="True"
+                           ReturnType="Done"
+                           />
+                </StackLayout>
+            </Frame>
+            <Button x:Name="btn_login" TextColor="MediumPurple"
+            Text="Conectar" Scale="1" CornerRadius="40" Margin="80"
+                     BackgroundColor="Transparent"/>
+ 
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
