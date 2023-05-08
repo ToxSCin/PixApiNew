@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Imagem\" />
     <Folder Include="Service\" />
   </ItemGroup>
 
