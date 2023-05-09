@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App1.View;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,7 @@ namespace App1.View
         public Login()
         {
             InitializeComponent();
+            logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
         }
 
 
@@ -47,20 +49,40 @@ namespace App1.View
         }
         private bool CheckCredentials(string cpf, string senha)
         {
-
-            if (cpf == "123.456.789-00" && senha == "password123")
+            //Login Para Admin
+            if (cpf == "999.999.999-99" && senha == "zzxxccvv123")
             {
                 return true;
             }
             else
             {
                 return false;
+            
             }
         }
 
-        private void cadastro_Clicked(object sender, EventArgs e)
+        private async void cadastro_Clicked(object sender, EventArgs e)
         {
-            
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.cadastro());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+        }
+
+        private async void user_Clicked_1(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Menu());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
         }
     }
 }
