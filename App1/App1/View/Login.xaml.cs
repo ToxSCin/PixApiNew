@@ -23,10 +23,6 @@ namespace App1.View
             logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
 
     }
-
-
-
-        
         private bool CheckCredentials(string cpf, string senha)
         {
             //Login Para Admin
