@@ -2,9 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.View.Menu">
+    <!-- Fundo -->
+    <ContentPage.Background>
+
+        <LinearGradientBrush>
+            <GradientStop Color="DarkOrange"
+                          Offset="0.01"/>
+            <GradientStop Color="DarkOrange"
+                          Offset="1.11"
+                          />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ContentPage.Content>
         <StackLayout>
-            
+            <Label Text="?User?" FontSize="Large" HorizontalOptions="Center" Margin="10,20,10,0"/>
+            <Label Text="$100,00" FontSize="Medium" HorizontalOptions="CenterAndExpand" Margin="0,20"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="10,30">
+                <Button Text="Botão 1" Margin="5"/>
+                <Button Text="Botão 2" Margin="5"/>
+                <Button Text="Botão 3" Margin="5"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
