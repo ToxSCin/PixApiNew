@@ -46,7 +46,7 @@
                     <Entry x:Name="txt_senha" Opacity="0.8" Placeholder="Senha:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
                 </StackLayout>
             </Frame>
-            <!-- Botão de login/Cadastro -->
+            <!-- Botão de login/Cadastro. -->
             <Button x:Name="user"
                     FontSize="Large"
                     TextColor="Black"
@@ -62,6 +62,7 @@
                     MinimumWidthRequest="20"
                     Text="Conectar"                     
                     Opacity="1"
+                    
                     HorizontalOptions="Center" />
             <Button Text="Criar uma conta." x:Name="cadastro"
                     Clicked="cadastro_Clicked"
