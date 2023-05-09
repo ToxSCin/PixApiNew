@@ -4,7 +4,6 @@
              x:Class="App1.View.Menu">
     <!-- Fundo -->
     <ContentPage.Background>
-
         <LinearGradientBrush>
             <GradientStop Color="DarkOrange"
                           Offset="0.01"/>
@@ -15,14 +14,74 @@
     </ContentPage.Background>
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="?User?" FontSize="Large" HorizontalOptions="Center" Margin="10,20,10,0"/>
-            <Label Text="$100,00" FontSize="Medium" HorizontalOptions="CenterAndExpand" Margin="0,20"/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="10,30">
-                <Button Text="Botão 1" Margin="5"/>
-                <Button Text="Botão 2" Margin="5"/>
-                <Button Text="Botão 3" Margin="5"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Linha Nome do usuário e saldo -->
+            <StackLayout Grid.Row="0" Padding="10,20" Spacing="-3">
+                
+                <!--<Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span>Bem-Vindo De Volta!</Span>
+                            <Span FontSize="Large">Nome do Usuário</Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label> -->
+
+                <Label Text="Bem-Vindo De Volta!" />
+                <Label Text="Nome do Usuário" FontSize="Large" HorizontalOptions="Fill" TextColor="Black" />
+                <Label Text="R$120,12" FontSize="Medium" HorizontalOptions="Fill" Margin="0,10" />
+                <Image x:Name="logo" Scale="1.3"/>
             </StackLayout>
-        </StackLayout>
+
+            <!-- Linha Botões -->
+
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="1" VerticalOptions="Start">
+                <Button Text="Pix"
+                        Margin="20"
+                        Padding="5,5"
+                        Scale="1.2"
+                        BackgroundColor="Orange"
+                        BorderWidth="1.5"
+                        BorderColor="Black"
+                        MinimumWidthRequest="100"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        />
+
+                    <Button Text="Saldo"
+                        Margin="20"
+                        Padding="5,5"        
+                        Scale="1.2"
+                        BorderWidth="1.5"
+                        BackgroundColor="Orange"
+                        BorderColor="Black"
+                        MinimumWidthRequest="100"
+                        Grid.Row="0"
+                        Grid.Column="1" />
+                    
+                    <Button Text="Conta"
+                        Margin="20"
+                        Padding="5,5"         
+                        Scale="1.2"
+                        BackgroundColor="Orange"
+                        BorderWidth="1.5"
+                        BorderColor="Black"
+                        MinimumWidthRequest="100"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        
+                        />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Scale="1">
+                    <Image x:Name="cartao"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

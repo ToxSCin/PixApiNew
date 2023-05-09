@@ -16,7 +16,8 @@ namespace App1.View
         public Menu()
         {
             InitializeComponent();
-            
+            logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
+            cartao.Source = ImageSource.FromResource("App1.Imagem.cartao2.png");
         }
     }
 }

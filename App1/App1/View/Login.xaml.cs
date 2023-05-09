@@ -26,7 +26,7 @@ namespace App1.View
         private bool CheckCredentials(string cpf, string senha)
         {
             //Login Para Admin
-            if (cpf == "999.999.999-99" && senha == "zzxxccvv123")
+            if (cpf == "999.999.999-99" && senha == "1")
             {
                 return true;
             }

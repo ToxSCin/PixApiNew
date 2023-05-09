@@ -20,11 +20,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Imagem\cartao.png" />
     <None Remove="Imagem\itau-logo-clipart-5.jpg" />
     <None Remove="Imagem\itauu.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Imagem\cartao.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagem\itauu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
