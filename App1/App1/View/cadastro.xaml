@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry" xmlns:local="clr-namespace:App1"
-             x:Class="App1.View.cadastro">
+             x:Class="App1.View.cadastro"
+             Title="Cadastro">
     <!-- Fundo -->
     <ContentPage.Background>
 
@@ -18,7 +19,7 @@
     <ContentPage.Content>
         
         <StackLayout VerticalOptions="Center">
-            
+          
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -53,11 +54,29 @@
                     CornerRadius="30"
                     VerticalOptions="Fill"
                     Scale="1"
-                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    BackgroundColor="Black"
                     BorderWidth="1.5"
                     BorderColor="Black"
                     MinimumWidthRequest="20" Opacity="1"
                     FontSize="17"> </Button>
+
+            <Button Clicked="Button_Clicked_1"
+                    Text="Voltar"
+                    Margin="1"
+                    Padding="2"
+                    Scale="0.8"
+                    VerticalOptions="Fill"
+                    BackgroundColor="Black"
+                    BorderColor="Black"
+                    TextColor="White"
+                    TextTransform="Default"
+                    BorderWidth="2"
+                    CornerRadius="50
+                    "
+                    MinimumHeightRequest="1" />
+
+
 
         </StackLayout>
 

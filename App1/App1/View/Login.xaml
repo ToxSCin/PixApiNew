@@ -51,18 +51,18 @@
             <!-- Botão de login/Cadastro. -->
             <Button x:Name="user"
                     FontSize="Large"
-                    TextColor="Black"
+                    TextColor="White"
                     Clicked="user_Clicked_1"
                     Margin="20"
                     Padding="10,10"
                     CornerRadius="30"
                     VerticalOptions="Fill"
                     Scale="1"
-                    BackgroundColor="Transparent"
+                    BackgroundColor="Black"
                     BorderWidth="1.5"
                     BorderColor="Black"
                     MinimumWidthRequest="20"
-                    Text="Conectar"                     
+                    Text="Logar"                     
                     Opacity="1"
                     
                     HorizontalOptions="Center" />
