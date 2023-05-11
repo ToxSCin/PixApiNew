@@ -71,7 +71,7 @@
                     FontAttributes="Italic" TextTransform="None"
                     BackgroundColor="Transparent" TextColor="Black"
                     CornerRadius="10" HorizontalOptions="Center"/>
-
+            <Button Clicked="Button_Clicked_1" ></Button>
         </StackLayout>
         
 

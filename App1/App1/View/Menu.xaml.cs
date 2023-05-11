@@ -19,5 +19,17 @@ namespace App1.View
             logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
             cartao.Source = ImageSource.FromResource("App1.Imagem.cartao2.png");
         }
+
+        private async void Saldo(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Saldo());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+        }
     }
 }
