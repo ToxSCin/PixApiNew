@@ -55,6 +55,7 @@
                         MinimumWidthRequest="100"
                         Grid.Row="0"
                         Grid.Column="0"
+                        Clicked="Pix"
                         />
 
                     <Button Text="Saldo"
@@ -67,7 +68,8 @@
                         MinimumWidthRequest="100"
                         Grid.Row="0"
                         Grid.Column="1"
-                        Clicked="Saldo"/>
+                        Clicked="Button_Clicked"
+                            />
                     
                     <Button Text="Conta"
                         Margin="20"

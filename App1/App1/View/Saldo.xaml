@@ -2,12 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.View.Saldo">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="DarkOrange"
+                          Offset="0.01"/>
+            <GradientStop Color="DarkOrange"
+                          Offset="1.11"
+                          />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Linha Nome do usuário e saldo -->
+            <StackLayout Grid.Row="0" Padding="10,20" Spacing="-3">
+                <Label Text="Nome do Usuário" FontSize="Large" HorizontalOptions="Fill" TextColor="Black" />
+                <Label Text="R$120,12" FontSize="Medium" HorizontalOptions="Fill" Margin="0,10" />
+                <Image x:Name="logo" ></Image>
+
+
+            </StackLayout>
             
-        </StackLayout>
+                    
+
+            
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

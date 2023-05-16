@@ -15,6 +15,13 @@ namespace App1.View
         public Saldo()
         {
             InitializeComponent();
+            logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
+
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

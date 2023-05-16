@@ -30,6 +30,39 @@ namespace App1.View
             {
                 await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
             }
+            Button botao = (Button)sender;
+            await botao.ScaleTo(1.2, 100, Easing.CubicOut);
+            await botao.ScaleTo(1, 100, Easing.CubicIn);
+        }
+
+        private async void Pix(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Pix());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+            Button botao = (Button)sender;
+            await botao.ScaleTo(1.2, 100, Easing.CubicOut);
+            await botao.ScaleTo(1, 100, Easing.CubicIn);
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Saldo());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+            Button botao = (Button)sender;
+            await botao.ScaleTo(1.2, 100, Easing.CubicOut);
+            await botao.ScaleTo(1, 100, Easing.CubicIn);
         }
     }
 }
