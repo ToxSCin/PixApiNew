@@ -57,9 +57,18 @@ namespace App1.View
 
         }
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private async void Button_Clicked_2(object sender, EventArgs e)
         {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Login());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
 
+            
         }
     }
 }
