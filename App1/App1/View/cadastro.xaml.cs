@@ -39,7 +39,7 @@ namespace App1.View
                 _context.Insert(NovoRegistro);
 
                 await DisplayAlert("Sucesso", "Usuário cadastrado com sucesso.", "OK");
-                await Navigation.PopAsync(); // Volta para tela de login após o registro
+                App.Current.MainPage = new NavigationPage(new View.Login());
             }
             catch (Exception ex)
             {

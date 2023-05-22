@@ -33,19 +33,7 @@ namespace App1.View
 
         }
 
-        private bool CheckCredentials(string cpf, string senha)
-        {
-            //Login Para Admin
-            if (cpf == "999.999.999-99" && senha == "1")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            
-            }
-        }
+      
 
         private async void cadastro_Clicked(object sender, EventArgs e)
         {
@@ -85,13 +73,12 @@ namespace App1.View
 
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
+
+            // Botão Voltar (Volta Para A Pagina Anterior)
             try
             {
                 App.Current.MainPage = new NavigationPage(new View.Menu());
