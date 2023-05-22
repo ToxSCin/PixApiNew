@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App1.View;
+using static App1.View.Banco;
+using SQLite;
+using System.IO;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,6 +16,9 @@ namespace App1.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+       
+        private Banco.DatabaseContext _context;
+
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Senha { get; set; }
@@ -21,8 +27,12 @@ namespace App1.View
         {
             InitializeComponent();
             logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
+            _context = new Banco.DatabaseContext(":memory:");
+            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db");
+            _context = new Banco.DatabaseContext(databasePath);
 
-    }
+        }
+
         private bool CheckCredentials(string cpf, string senha)
         {
             //Login Para Admin
@@ -55,28 +65,23 @@ namespace App1.View
 
         private void user_Clicked_1(object sender, EventArgs e)
         {
-            string CPF = txt_cpf.Text;
-            string Senha = txt_senha.Text;
-            string Nome = txt_name.Text;
+            // Obtenha os valores digitados nos campos de CPF e Senha
+            string cpf = txt_cpf.Text;
+            string senha = txt_senha.Text;
 
-            if (string.IsNullOrEmpty(CPF) || string.IsNullOrEmpty(Senha))
+            // Verifique se existe um registro com as credenciais informadas
+            bool isValidCredentials = _context.IsValidCredentials(cpf, senha);
+
+            if (isValidCredentials)
             {
-                DisplayAlert("Erro de Login", "CPF e senha são obrigatórios.", "OK");
-                return;
-            }
-
-            // Verifica se o CPF e a senha inseridada é valida
-            bool isValidUser = CheckCredentials(CPF, Senha);
-
-            if (isValidUser)
-            {
-                App.Current.MainPage = new NavigationPage(new View.Menu());
+                // Credenciais válidas, redirecione para a página principal do aplicativo
+                App.Current.MainPage = new Menu();
             }
             else
             {
-                DisplayAlert("Erro de Login", "CPF ou senha inválidos.", "OK");
+                // Credenciais inválidas, exiba uma mensagem de erro
+                DisplayAlert("Erro", "Credenciais inválidas.", "OK");
             }
-
 
         }
 
