@@ -71,7 +71,7 @@
                         Clicked="Button_Clicked"
                             />
                     
-                    <Button Text="Conta"
+                    <Button Text="QrCode"
                         Margin="20"
                         Padding="5,5"         
                         Scale="1.2"
@@ -81,6 +81,7 @@
                         MinimumWidthRequest="100"
                         Grid.Row="1"
                         Grid.Column="0"
+                        Clicked="Conta"
                         
                         />
                 </StackLayout>
