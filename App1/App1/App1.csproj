@@ -11,11 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\**" />
     <Compile Remove="Service\**" />
-    <EmbeddedResource Remove="Model\**" />
     <EmbeddedResource Remove="Service\**" />
-    <None Remove="Model\**" />
     <None Remove="Service\**" />
   </ItemGroup>
 
@@ -67,5 +64,9 @@
     <EmbeddedResource Update="View\Saldo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
 </Project>

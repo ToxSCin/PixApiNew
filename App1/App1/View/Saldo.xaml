@@ -26,7 +26,19 @@
 
 
             </StackLayout>
-            
+            <Button Clicked="Voltar"
+                    Text="Voltar"
+                    Margin="1"
+                    Padding="2"
+                    Scale="0.8"
+                    VerticalOptions="Fill"
+                    BackgroundColor="Black"
+                    BorderColor="Black"
+                    TextColor="White"
+                    TextTransform="Default"
+                    BorderWidth="2"
+                    CornerRadius="50"
+                     />
                     
 
             

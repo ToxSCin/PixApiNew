@@ -19,9 +19,19 @@ namespace App1.View
 
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Voltar(object sender, EventArgs e)
         {
-
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Menu());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+            Button botao = (Button)sender;
+            await botao.ScaleTo(1.2, 100, Easing.CubicOut);
+            await botao.ScaleTo(1, 100, Easing.CubicIn);
         }
     }
 }

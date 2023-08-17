@@ -20,7 +20,7 @@
                        VerticalOptions="Center"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"/>
-                
+                <!-- Mostra o QR Code -->
                 <Label Text="APARECER O LEITOR DE QR CODE"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
