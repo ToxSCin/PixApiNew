@@ -25,7 +25,7 @@ namespace App1.View
         {
             base.OnAppearing();
 
-            zxing.IsScanning = true;    
+            zxing.IsScanning = true;
         }
 
         protected override void OnDisappearing()
@@ -33,6 +33,20 @@ namespace App1.View
             zxing.IsScanning = false;
 
             base.OnDisappearing();
+        }
+        private async void Voltar(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Menu());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+            Button botao = (Button)sender;
+            await botao.ScaleTo(1.2, 100, Easing.CubicOut);
+            await botao.ScaleTo(1, 100, Easing.CubicIn);
         }
     }
 }

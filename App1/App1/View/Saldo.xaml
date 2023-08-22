@@ -26,12 +26,13 @@
 
 
             </StackLayout>
-            <Button Clicked="Voltar"
+            <StackLayout Grid.Row="3" Padding="10,20" Spacing="-3">
+                <Button Clicked="Voltar"
                     Text="Voltar"
-                    Margin="1"
-                    Padding="2"
+                    Margin="4"
+                    Padding="1"
                     Scale="0.8"
-                    VerticalOptions="Fill"
+                    VerticalOptions="Center"
                     BackgroundColor="Black"
                     BorderColor="Black"
                     TextColor="White"
@@ -39,9 +40,10 @@
                     BorderWidth="2"
                     CornerRadius="50"
                      />
-                    
+            </StackLayout>
 
-            
+
+
         </Grid>
         
     </ContentPage.Content>
