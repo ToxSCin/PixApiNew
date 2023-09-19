@@ -7,11 +7,13 @@ namespace App1
 {
     public partial class App : Application
     {
+        public static Model.Correntista DadosCorrentista { get; set; }
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Login(); 
+            MainPage = new Login();
+
         }
 
         protected override void OnStart()

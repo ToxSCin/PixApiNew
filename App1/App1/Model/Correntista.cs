@@ -6,16 +6,16 @@ namespace App1.Model
 {
     public class Correntista
     {
-        public int id_correntista { get; set; }
+        public int id { get; set; }
 
         public string nome { get; set; }
 
         public string cpf { get; set; }
 
-        public DateTime data_nascimento { get; set; }
+        public DateTime data_nasc { get; set; }
 
-        public string senha_correntista { get; set; }
+        public string senha { get; set; }
 
-        public bool ativo { get; set; } = true;
+        
     }
 }

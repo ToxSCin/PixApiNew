@@ -8,6 +8,8 @@ using Xamarin.Forms.Xaml;
 using SQLitePCL;
 using SQLite;
 using static App1.View.Banco;
+using App1.Service;
+using App1.Model;
 
 namespace App1.View
 {
@@ -30,20 +32,28 @@ namespace App1.View
         {
             try
             {
-                // Preencher os dados do novo registro
-                NovoRegistro.CPF = txt_cpf.Text;
-                NovoRegistro.NOME = txt_nome.Text;
-                NovoRegistro.SENHA = txt_senha.Text;
+                Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
+                {
+                    nome = txt_nome.Text,                  
+                    cpf = txt_cpf.Text,
+                   senha = txt_senha.Text,
+                });
 
-                // Salvar o registro no banco de dados
-                _context.Insert(NovoRegistro);
+                if (c.id != null)
+                {
+                    
+                    App.DadosCorrentista = c;
 
-                await DisplayAlert("Sucesso", "Usuário cadastrado com sucesso.", "OK");
-                App.Current.MainPage = new NavigationPage(new View.Login());
+                   
+                    await Navigation.PushAsync(new View.Login());
+                }
+                else
+                    throw new Exception("Ocorreu um erro ao salvar seu cadastro.");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+                Console.WriteLine(ex.StackTrace);
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
         }
 

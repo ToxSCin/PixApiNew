@@ -10,71 +10,40 @@ using App1.Service;
 
 namespace App1.Service
 {
-    public class Data_Service_Correntista : Data_Service
+    public class DataServiceCorrentista : Data_Service
     {
-
-        public static async Task<Correntista> SaveAsyncCorrentista(Correntista model)
+        /**
+         * Realiza o login do cliente.
+         */
+        public static async Task<Correntista> LoginAsync(Correntista c)
         {
+            var json_a_enviar = JsonConvert.SerializeObject(c);
+            
+            Console.WriteLine("__________________________________________________________________");
+            Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine("__________________________________________________________________");
 
-            var post_json = JsonConvert.SerializeObject(model);
+            string json = await Data_Service.SendDataApi(json_a_enviar, "/correntista/entrar");
 
-            string json = await Data_Service.SendDataApi(post_json, "/correntista/save");
-
-            Correntista model_retornada = JsonConvert.DeserializeObject<Correntista>(json);
-
-            return model_retornada;
-
+            return JsonConvert.DeserializeObject<Correntista>(json);
         }
 
-        public static async Task<bool> DisableAsyncCorrentista(int id)
+        /**
+         * Envia a Model de um Cliente para ser cadastrado no banco.
+         */
+        public static async Task<Correntista> SaveAsync(Correntista c)
         {
+            var json_a_enviar = JsonConvert.SerializeObject(c);
 
-            var post_json = JsonConvert.SerializeObject(id);
+            Console.WriteLine("__________________________________________________________________");
+            Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine("__________________________________________________________________");
 
-            string json = await Data_Service.SendDataApi(post_json, "/correntista/disable");
+            string json = await Data_Service.SendDataApi(json_a_enviar, "/correntista/salvar");
 
-            bool exito = JsonConvert.DeserializeObject<bool>(json);
-
-            return exito;
-
+            return JsonConvert.DeserializeObject<Correntista>(json);
         }
-
-        public static async Task<List<Correntista>> GetListAsyncCorrentista()
-        {
-
-            string json = await Data_Service.GetDataApi("/correntista/list");
-
-            List<Correntista> lista_correntistas = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-            return lista_correntistas;
-
-        }
-
-        public static async Task<List<Correntista>> SearchAsyncCorrentista(string parametro)
-        {
-
-            var post_json = JsonConvert.SerializeObject(parametro);
-
-            string json = await Data_Service.SendDataApi(post_json, "/correntista/search");
-
-            List<Correntista> lista_correntistas_encontrados = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-            return lista_correntistas_encontrados;
-
-        }
-
-        public static async Task<List<Correntista>> LoginAsyncCorrentista(string[] dados_login)
-        {
-
-            var post_json = JsonConvert.SerializeObject(dados_login);
-
-            string json = await Data_Service.SendDataApi(post_json, "/correntista/login");
-
-            List<Correntista> correntista_correspondente = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-            return correntista_correspondente;
-
-        }
-
     }
 }
