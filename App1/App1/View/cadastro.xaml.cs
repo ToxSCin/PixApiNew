@@ -42,7 +42,7 @@ namespace App1.View
                 if (c.id != null)
                 {
                     
-                    App.DadosCorrentista = c;
+                   
 
                    
                     await Navigation.PushAsync(new View.Login());
