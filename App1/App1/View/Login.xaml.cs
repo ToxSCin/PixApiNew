@@ -10,6 +10,7 @@ using System.IO;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Service;
 
 namespace App1.View
 {
@@ -51,45 +52,39 @@ namespace App1.View
             await botao.ScaleTo(1, 100, Easing.CubicIn);
         }
 
-        private void user_Clicked_1(object sender, EventArgs e)
+        private async void user_Clicked_1(object sender, EventArgs e)
         {
-            // Obtenha os valores digitados nos campos de CPF e Senha
-            string cpf = txt_cpf.Text;
-            string senha = txt_senha.Text;
-
-            // Verifique se existe um registro com as credenciais informadas
-            bool isValidCredentials = _context.IsValidCredentials(cpf, senha);
-
-            if (isValidCredentials)
-            {
-                // Credenciais válidas, redirecione para a página principal do aplicativo
-                App.Current.MainPage = new Menu();
-            }
-            else
-            {
-                // Credenciais inválidas, exiba uma mensagem de erro
-                DisplayAlert("Erro", "Credenciais inválidas.", "OK");
-            }
-
-        }
-
-        
-
-        private async void Button_Clicked_1(object sender, EventArgs e)
-        {
-
-            // Botão Voltar (Volta Para A Pagina Anterior)
             try
             {
-                App.Current.MainPage = new NavigationPage(new View.Menu());
+                Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
+                {
+                    nome = txt_name.Text,
+                    cpf = txt_cpf.Text,
+                    senha = txt_senha.Text,
+                });
+
+                if (c.id != null)
+                {
+
+
+
+
+                    await Navigation.PushAsync(new View.Menu());
+                }
+                else
+                    throw new Exception("Erro.");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+                Console.WriteLine(ex.StackTrace);
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
-            Button botao = (Button)sender;
-            await botao.ScaleTo(1.2, 100, Easing.CubicOut); 
-            await botao.ScaleTo(1, 100, Easing.CubicIn); 
         }
+
     }
-}
+
+        
+
+       
+        
+    }
