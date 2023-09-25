@@ -14,6 +14,8 @@ namespace App1.Model
 
         public string nome { get; set; }
 
-        
+        public DateTime data_nascimento { get; set; } 
+
+
     }
 }

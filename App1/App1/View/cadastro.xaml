@@ -44,6 +44,9 @@
                     <!-- Deixa CPF no formato adequado -->
                     <control:MaskedEntry x:Name="txt_cpf" Placeholder="CPF:" FontAttributes="Bold" TextColor="black" PlaceholderColor="Black" Keyboard="Numeric" Mask="XXX.XXX.XXX-XX" FontSize="17"/>
                     <Entry x:Name="txt_senha" Placeholder="Senha:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
+                    <DatePicker x:Name="dtcpk_nascimento"
+                                Format="dd/MM/yyyy"
+                                TextColor="White"/>
                     <Entry x:Name="txt_nome" Placeholder="Nome:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="False" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
                 </StackLayout>
             </Frame>

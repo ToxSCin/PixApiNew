@@ -34,10 +34,11 @@ namespace App1.View
             {
                 Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
                 {
-                    nome = txt_nome.Text,                  
+                    nome = txt_nome.Text,
                     cpf = txt_cpf.Text,
-                   senha = txt_senha.Text,
-                });
+                    senha = txt_senha.Text,
+                    data_nascimento = dtcpk_nascimento.Date,
+                }) ;
 
                 if (c.id != null)
                 {
