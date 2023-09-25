@@ -38,6 +38,7 @@ namespace App1.View
                     cpf = txt_cpf.Text,
                     senha = txt_senha.Text,
                     data_nascimento = dtcpk_nascimento.Date,
+                    email = txt_email.Text,
                 }) ;
 
                 if (c.id != null)

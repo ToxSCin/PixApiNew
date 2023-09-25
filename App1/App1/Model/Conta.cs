@@ -6,7 +6,7 @@ namespace App1.Model
 {
     public class Conta
     {
-        public int id_conta { get; set; }
+        public int ?id { get; set; }
 
         public double saldo { get; set; }
 
@@ -16,7 +16,7 @@ namespace App1.Model
 
         public bool ativa { get; set; } = true;
 
-        public int fk_correntista { get; set; }
+        public Correntista id_correntista { get; set; }
 
         public DateTime data_abertura { get; set; }
 

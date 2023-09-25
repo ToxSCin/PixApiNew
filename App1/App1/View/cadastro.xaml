@@ -46,7 +46,9 @@
                     <Entry x:Name="txt_senha" Placeholder="Senha:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
                     <DatePicker x:Name="dtcpk_nascimento"
                                 Format="dd/MM/yyyy"
-                                TextColor="White"/>
+                                TextColor="Black"/>
+                    <Entry x:Name="txt_email" Placeholder="Email:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="False" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
+
                     <Entry x:Name="txt_nome" Placeholder="Nome:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="False" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
                 </StackLayout>
             </Frame>
