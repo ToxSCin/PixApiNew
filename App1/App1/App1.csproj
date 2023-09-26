@@ -11,16 +11,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Imagem\cartao.png" />
-    <None Remove="Imagem\itau-logo-clipart-5.jpg" />
-    <None Remove="Imagem\itauu.png" />
+    <Compile Remove="Imagem\NovaPasta\**" />
+    <EmbeddedResource Remove="Imagem\NovaPasta\**" />
+    <None Remove="Imagem\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Imagem\Banco.png" />
+    <None Remove="Imagem\cartao.png" />
+    <None Remove="Imagem\itau-logo-clipart-5.jpg" />
+    <None Remove="Imagem\itauu.png" />
+    <None Remove="Imagem\TOx.png" />
+    <None Remove="Imagem\ToxBank.png" />
+    <None Remove="Imagem\ToxBankk.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Imagem\Banco.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imagem\cartao.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Imagem\itauu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagem\ToxBank.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagem\ToxBankk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

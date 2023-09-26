@@ -8,7 +8,7 @@
                 <Setter Property="Margin" Value="20" />
                 <Setter Property="Padding" Value="5,5" />
                 <Setter Property="Scale" Value="1.2" />
-                <Setter Property="BackgroundColor" Value="Orange" />
+                <Setter Property="BackgroundColor" Value="#00FF43" />
                 <Setter Property="BorderWidth" Value="1.5" />
                 <Setter Property="BorderColor" Value="Black" />
                 <Setter Property="MinimumWidthRequest" Value="100" />
@@ -19,8 +19,8 @@
 
     <ContentPage.Background>
         <LinearGradientBrush>
-            <GradientStop Color="DarkOrange" Offset="0.01" />
-            <GradientStop Color="DarkOrange" Offset="1.11" />
+            <GradientStop Color="Black" Offset="0.1" />
+            <GradientStop Color="Black" Offset="0.9" />
         </LinearGradientBrush>
     </ContentPage.Background>
 
@@ -28,20 +28,27 @@
         
         <StackLayout>
             <StackLayout Grid.Row = "0" Padding = "10,20" Spacing = "-3">
-                <Label Text = "Nome do Usuário" FontSize = "Large" HorizontalOptions = "Fill" TextColor = "Black" />
-                <Label Text = "R$120,12" FontSize = "Medium" HorizontalOptions = "Fill" Margin = "0,10" />
-                <Image x:Name ="logo" Scale="1.3"/>
+                <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="Start"/>
+
+                <Label>Test</Label>
+                <Label>Test</Label>
+                <Label>Test</Label><Image x:Name ="ToxBanco" Scale="2" HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal">
-                        <Button Text="Pix" Clicked="Pix" Style="{StaticResource ButtonStyle}" BorderWidth="1" CornerRadius="50" WidthRequest="100" />
+                        <StackLayout>
+                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://imagensfree.com.br/wp-content/uploads/2022/01/icone-pix-outline-nubank.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Pix"/>
+                            <Label Text="Pix" FontSize="12" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        </StackLayout>
                         <Button Text="Saldo" Clicked="Button_Clicked" Style="{StaticResource ButtonStyle}" BorderWidth="1" CornerRadius="50" WidthRequest="100" />
                         <Button Text="QrCode" Clicked="Conta" Style="{StaticResource ButtonStyle}" BorderWidth="1" CornerRadius="50" WidthRequest="100" />
                         <Button Text="Voltar" Clicked="Voltar" Style="{StaticResource ButtonStyle}" BorderWidth="1" CornerRadius="50" WidthRequest="100" />
                     </StackLayout>
+                    
                 </ScrollView>
             </StackLayout>
+            
             <StackLayout>
                 <Image x:Name ="anun" Scale="1.3"/>
             </StackLayout>

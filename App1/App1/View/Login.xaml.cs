@@ -41,7 +41,7 @@ namespace App1.View
 
             try
             {
-                App.Current.MainPage = new NavigationPage(new View.cadastro());
+                App.Current.MainPage = new NavigationPage(new View.Menu());
             }
             catch (Exception ex)
             {
