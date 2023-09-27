@@ -112,5 +112,18 @@ namespace App1.View
         {
 
         }
+
+        private async void Perfil(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Profile());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
+            }
+            Button botao = (Button)sender;
+        }
     }
 }

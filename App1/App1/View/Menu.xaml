@@ -28,7 +28,7 @@
         
         <StackLayout>
             <StackLayout Grid.Row = "0" Padding = "10,20" Spacing = "-3">
-                <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="Start"/>
+                <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="#00FF43" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="Start" Clicked="Perfil"/>
 
                 <Label>Test</Label>
                 <Label>Test</Label>

@@ -22,7 +22,8 @@ namespace App1.View
         public cadastro()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
+            ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");
+
             NovoRegistro = new RegistroModel();
             var databasePath = ":memory:";
             _context = new Banco.DatabaseContext(databasePath);

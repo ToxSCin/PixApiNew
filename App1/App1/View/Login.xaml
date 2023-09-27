@@ -71,7 +71,9 @@
                     FontAttributes="Italic" TextTransform="None"
                     BackgroundColor="Transparent" TextColor="Black"
                     CornerRadius="10" HorizontalOptions="Center"/>
-            
+
+            <Button Text="Tox" Clicked="Button_Clicked" />
+
         </StackLayout>
         
 
