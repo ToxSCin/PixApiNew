@@ -22,6 +22,9 @@ namespace App1.View
         public cadastro()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
             ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");
 
             NovoRegistro = new RegistroModel();
