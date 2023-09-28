@@ -19,6 +19,7 @@ namespace App1.View
         public RegistroModel NovoRegistro { get; set; }
         private Banco.DatabaseContext _context;
 
+
         public cadastro()
         {
             InitializeComponent();

@@ -17,12 +17,15 @@ namespace App1.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+
        
         private Banco.DatabaseContext _context;
 
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Senha { get; set; }
+
+
 
         public Login()
         {
@@ -31,10 +34,11 @@ namespace App1.View
             _context = new Banco.DatabaseContext(":memory:");
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db");
             _context = new Banco.DatabaseContext(databasePath);
+            NavigationPage.SetHasNavigationBar(this, false);
 
         }
 
-      
+
 
         private async void cadastro_Clicked(object sender, EventArgs e)
         {
