@@ -9,10 +9,10 @@
     <ContentPage.Background>
         
         <LinearGradientBrush>
-            <GradientStop Color="DarkOrange"
+            <GradientStop Color="Black"
                           Offset="0.01"/>
-            <GradientStop Color="DarkOrange"
-                          Offset="1.11"
+            <GradientStop Color="Black"
+                          Offset="0.01"
                           />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -28,13 +28,13 @@
                 </Grid.RowDefinitions>
 
                 <!-- Logo do banco -->
-                <Image x:Name="logo" Scale="1.3"/>
+                <Image x:Name="ToxBanco" Scale="2"/>
             </Grid>
-            <Image Source="App1.Imagem.itau.jpg"/>
+            
             <Frame CornerRadius="30"
                    x:Name="form_login"
                    VerticalOptions="Fill"
-                   BackgroundColor="DarkOrange"
+                   BackgroundColor="#00FF43"
                    BorderColor="Black"
                    Margin="20"
                    Scale="1"
@@ -43,7 +43,7 @@
                 <StackLayout>
                     <!-- Deixa CPF no formato adequado -->
                     <Entry x:Name="txt_name" Opacity="0.8" Placeholder="Nome:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17"/>
-                    <control:MaskedEntry x:Name="txt_cpf" Placeholder="CPF:" FontAttributes="Bold" TextColor="black" PlaceholderColor="Black" Keyboard="Numeric" Mask="XXX.XXX.XXX-XX" FontSize="17"/>
+                    <control:MaskedEntry x:Name="txt_cpf" Opacity="0.8" Placeholder="CPF:" FontAttributes="Bold" TextColor="black" PlaceholderColor="Black" Keyboard="Numeric" Mask="XXX.XXX.XXX-XX" FontSize="17"/>
                     <Entry x:Name="txt_senha" Opacity="0.8" Placeholder="Senha:" PlaceholderColor="Black" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" FontAttributes="Bold" FontSize="17" />
                     
                 </StackLayout>
@@ -51,16 +51,16 @@
             <!-- Botão de login/Cadastro. -->
             <Button x:Name="user"
                     FontSize="Large"
-                    TextColor="White"
+                    TextColor="#00FF43"
                     Clicked="user_Clicked_1"
                     Margin="20"
                     Padding="10,10"
                     CornerRadius="30"
                     VerticalOptions="Fill"
                     Scale="1"
-                    BackgroundColor="Black"
+                    BackgroundColor="Transparent"
                     BorderWidth="1.5"
-                    BorderColor="Black"
+                    BorderColor="#00FF43"
                     MinimumWidthRequest="20"
                     Text="Logar"                     
                     Opacity="1"
@@ -69,7 +69,7 @@
             <Button Text="Criar uma conta." x:Name="cadastro"
                     Clicked="cadastro_Clicked"
                     FontAttributes="Italic" TextTransform="None"
-                    BackgroundColor="Transparent" TextColor="Black"
+                    BackgroundColor="Transparent" TextColor="#00FF43"
                     CornerRadius="10" HorizontalOptions="Center"/>
 
             <Button Text="Tox" Clicked="Button_Clicked" />

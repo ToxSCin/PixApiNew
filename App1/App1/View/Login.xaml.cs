@@ -30,11 +30,11 @@ namespace App1.View
         public Login()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("App1.Imagem.itauu.png");
             _context = new Banco.DatabaseContext(":memory:");
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db");
             _context = new Banco.DatabaseContext(databasePath);
             NavigationPage.SetHasNavigationBar(this, false);
+            ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");
 
         }
 
