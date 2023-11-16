@@ -18,24 +18,11 @@ namespace App1.View
     public partial class Login : ContentPage
     {
 
-       
-        private Banco.DatabaseContext _context;
-
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public string Senha { get; set; }
-
-
-
         public Login()
         {
             InitializeComponent();
-            _context = new Banco.DatabaseContext(":memory:");
-            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db");
-            _context = new Banco.DatabaseContext(databasePath);
             NavigationPage.SetHasNavigationBar(this, false);
             ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");
-
         }
 
 
@@ -60,7 +47,7 @@ namespace App1.View
         {
             try
             {
-                Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
+                Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
                 {
                     nome = txt_name.Text,
                     cpf = txt_cpf.Text,
@@ -83,7 +70,7 @@ namespace App1.View
                 Console.WriteLine(ex.StackTrace);
                 await DisplayAlert("Ops!", ex.Message, "OK");
             }
-        }
+        } 
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
