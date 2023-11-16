@@ -37,15 +37,24 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal">
-                        <StackLayout>
-                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://imagensfree.com.br/wp-content/uploads/2022/01/icone-pix-outline-nubank.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Saldo"/>
+                        <StackLayout Margin="45,0,0,0">
+                            <ImageButton HorizontalOptions="CenterAndExpand"  Source="https://cdn-icons-png.flaticon.com/512/3076/3076631.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Saldo"/>
                             <Label Text="Saldo" FontSize="12" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
-                        </StackLayout>
+                        </StackLayout> 
+                        
                         <StackLayout>
-                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn-icons-png.flaticon.com/512/3076/3076631.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Pix"/>
+                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://imagensfree.com.br/wp-content/uploads/2022/01/icone-pix-outline-nubank.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Pix"/>
                             <Label Text="Pix" FontSize="12" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
                         </StackLayout>
-                        
+                        <StackLayout>
+                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn-icons-png.flaticon.com/512/876/876784.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="LerQr"/>
+                            <Label Text="LerQr" FontSize="12" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn-icons-png.flaticon.com/512/2099/2099166.png" CornerRadius="50" BackgroundColor="#00FF43" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Voltar"/>
+                            <Label Text="Voltar" FontSize="12" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        </StackLayout>
+
                     </StackLayout>
                     
                 </ScrollView>

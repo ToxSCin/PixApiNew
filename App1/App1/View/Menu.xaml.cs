@@ -38,12 +38,12 @@ namespace App1.View
             {
                 await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
             }
-            Button botao = (Button)sender;
+            
            
            
         }
 
-        private async void Conta(object sender, EventArgs e)
+        private async void LerQr(object sender, EventArgs e)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace App1.View
             {
                 await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
             }
-            Button botao = (Button)sender;
+            
             
         }
         private async void Voltar(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace App1.View
             {
                 await DisplayAlert("Ops, ocorreu um erro", ex.Message, "OK");
             }
-            Button botao = (Button)sender;
+            
             
         }
 
