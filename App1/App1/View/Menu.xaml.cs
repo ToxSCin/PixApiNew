@@ -19,7 +19,7 @@ namespace App1.View
         {
             InitializeComponent();
             anun.Source = ImageSource.FromResource("App1.Imagem.anun.png");
-            ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");dsaadas
+            ToxBanco.Source = ImageSource.FromResource("App1.Imagem.ToxBankk.png");
         }
 
         private async void Saldo(object sender, EventArgs e)
