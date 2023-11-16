@@ -72,7 +72,6 @@
                     BackgroundColor="Transparent" TextColor="#00FF43"
                     CornerRadius="10" HorizontalOptions="Center"/>
 
-            <Button Text="Tox" Clicked="Button_Clicked" />
 
         </StackLayout>
         
